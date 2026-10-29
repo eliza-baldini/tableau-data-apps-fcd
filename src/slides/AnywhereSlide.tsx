@@ -37,11 +37,15 @@ export function AnywhereSlide() {
         {c.cards.map((card, i) => (
           <Build key={card.title} at={i + 1} y={30} className="min-h-0">
             <article className="flex h-full flex-col rounded-[32px] bg-white/90 p-8">
-              <div className="min-h-0 flex-1">
+              <Build at={i + 1} delay={0.15} y={16} scale={0.97} className="min-h-0 flex-1">
                 <CardArt i={i} />
-              </div>
-              <h3 className="mt-6 text-[36px] font-semibold text-navy-900">{card.title}</h3>
-              <p className="mt-2 text-[30px] leading-[1.25] text-navy-900">{card.text}</p>
+              </Build>
+              <Build at={i + 1} delay={0.3} y={12}>
+                <h3 className="mt-6 text-[36px] font-semibold text-navy-900">{card.title}</h3>
+              </Build>
+              <Build at={i + 1} delay={0.4} y={12}>
+                <p className="mt-2 text-[30px] leading-[1.25] text-navy-900">{card.text}</p>
+              </Build>
             </article>
           </Build>
         ))}

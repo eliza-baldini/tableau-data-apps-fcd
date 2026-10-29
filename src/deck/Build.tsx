@@ -4,7 +4,7 @@ import { createContext, useContext, type CSSProperties, type ReactNode } from 'r
 export const easeOutExpo = [0.16, 1, 0.3, 1] as const
 
 /** Multiplier on every animation's duration and delay: above 1 is slower, below 1 faster. */
-export const MOTION_SCALE = 1
+export const MOTION_SCALE = 1.25
 
 /** Applies MOTION_SCALE to a transition's duration and delay. */
 export function timed(t: Transition): Transition {

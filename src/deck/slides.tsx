@@ -77,11 +77,11 @@ const bySection: Record<string, Entry[]> = {
   ],
   dataapps: [
     { id: 'anywhere', title: 'Vibe code anywhere. Stay governed everywhere.', steps: 4, pace: [500, 500, 500], surface: 'sky', Component: AnywhereSlide },
-    { id: 'data-apps', title: 'Tableau Data Apps', steps: 6, pace: [500, 450, 450, 450, 450], surface: 'blue', Component: DataAppsSlide },
+    { id: 'data-apps', title: 'Tableau Data Apps', steps: 2, pace: [700], surface: 'blue', Component: DataAppsSlide },
     { id: 'half-stack', title: 'Data Apps covers half the stack on day one', steps: 2, pace: [700], surface: 'blue', Component: LayersSlide, props: { content: dataAppsHalf } },
   ],
   studio: [
-    { id: 'studio', title: 'Tableau Studio', steps: 6, pace: [500, 450, 450, 450, 450], surface: 'blue', Component: StudioSlide },
+    { id: 'studio', title: 'Tableau Studio', steps: 2, pace: [700], surface: 'blue', Component: StudioSlide },
     { id: 'studio-17', title: 'Studio apps inherit 17 of 18 layers', steps: 2, pace: [700], surface: 'blue', Component: LayersSlide, props: { content: studio17 } },
   ],
   heroku: [{ id: 'heroku', title: 'Tableau Data Apps & Heroku', steps: 3, pace: [600, 700], surface: 'sky', Component: HerokuSlide }],
@@ -97,7 +97,7 @@ export const sectionTabs = sections.map((s) => ({ id: s.id, label: s.tab, first:
 const DEFAULT_PACE = 600
 
 /** Multiplier on every slide's pacing: below 1 is faster, above 1 slower. */
-export const PACE_SCALE = 1
+export const PACE_SCALE = 1.25
 
 /** Delay before advancing from `step` to `step + 1` on slide `index`. */
 export function buildDelay(index: number, step: number) {

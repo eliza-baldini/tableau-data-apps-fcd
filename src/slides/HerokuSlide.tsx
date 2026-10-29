@@ -24,13 +24,15 @@ export function HerokuSlide() {
             <article className="h-full rounded-[64px] bg-white px-14 pt-9 pb-8">
               <h3 className="text-center text-[34px] font-semibold">{col.name}</h3>
               <ul className="mt-5 space-y-2.5 text-[27px] leading-[1.27]">
-                {col.items.map((it) => (
-                  <li key={it} className="flex gap-4">
+                {col.items.map((it, j) => (
+                  <Build key={it} at={i + 1} delay={0.25 + j * 0.1} x={-16} y={0} duration={0.7}>
+                  <li className="flex gap-4">
                     <span className="mt-[0.62em] size-2.5 shrink-0 rounded-full bg-navy-900" />
                     <span>
                       <RichText text={it} accentClass="" />
                     </span>
                   </li>
+                  </Build>
                 ))}
               </ul>
             </article>

@@ -45,7 +45,7 @@ export function LayersSlide({ content: c }: { content: LayersSlideContent }) {
       <div className="mt-8 grid flex-1 grid-cols-5 gap-x-[28px] px-1">
         {groups.map((g, gi) => (
           <div key={g}>
-            <Build y={10}>
+            <Build y={10} delay={0.2 + gi * 0.05}>
               <h3 className="mb-3 px-2 text-[24px] font-semibold">{g}</h3>
             </Build>
             <div className="flex flex-col gap-4">
